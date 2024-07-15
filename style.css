@@ -67,16 +67,17 @@ body {
 }
 .category-form{
   padding: 1.2rem 1rem;
-  display: flex;
+  /* display: flex; */
   gap: 1rem;
   width: 100%;
 }
 .category-form input[type=text] {
 font-size: 1rem;
 
-width: 100%;
+width: 60%;
 padding: 0.4rem 0.5rem ;
 font-size: 1rem;
+margin-right: 15px;
 border-bottom: 1px solid grey;
 border-radius: 5px;
 
@@ -93,7 +94,14 @@ border-radius: 5px;
   text-align: center;
   text-wrap: wrap;
 }
-
+.category-form >p {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0;
+  height: 1rem;
+  transition: opacity 0.2s ease-in
+}
 .categoryUl{
   display: flex;
   flex-direction: column;
@@ -112,10 +120,19 @@ border-radius: 5px;
 .todo-content {
   
 }
+.todo-article{
+  display: flex ;
+  gap: 1rem; 
+  align-items: center;
+}
+.todo-article.greyed-out{
+  /* background-color: rgb(99, 97, 97); */
+  opacity: 0.6;
+}
 
 dialog {
   position: fixed;
-  top: 50%;
+  top: 150%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 40ch;
@@ -124,12 +141,17 @@ dialog {
   border: 1px solid grey;
   border-radius: 10px;
   overflow: hidden;
+  opacity:0;
+  transition: top 0.4s ease-in, opacity 0.4s ease-out;
 }
 dialog::backdrop {
   background-color: aqua;
   opacity: 0.2;
 }
-
+dialog.show{
+  top:50%;
+  opacity:1
+}
 .todo-form{
   display: grid;
   grid-template-rows: auto 1fr auto;

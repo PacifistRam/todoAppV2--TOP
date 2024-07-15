@@ -2,14 +2,14 @@ import './style.css'
 
 // module imports
 
-import { createCategoryForm } from "./jsModules/domOperations";
+import { initialLoad } from "./jsModules/domOperations";
+
+
+// initial rendering function
+initialLoad()
 
 
 
-createCategoryForm()
-
-
-import { createModal } from './jsModules/modal';
 
 
 

@@ -20,7 +20,7 @@ export const category = (categoryName) => {
 export const todos = (title,note,priority,dueDate) => {
   const id = uuidv4();
   const createdDate = format(new Date(),"yyyy/MM/dd");
-  const dayDifference = differenceInDays(new Date(dueDate), createdDate)
-  
-  return{id,title,note,priority,createdDate,dueDate,dayDifference}
+  const updatedDate = undefined;
+  const isCompleted = false;
+  return{id,title,note,priority,createdDate,updatedDate,dueDate,isCompleted}
 }
